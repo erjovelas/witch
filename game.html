@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <script src="js/juego.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+   
+</head>
+
+<body id="game">
+    <audio autoplay loop preload="auto" src="spellcraft-142264.mp3"></audio>
+
+    <div id="mensaje" style="display: none;">
+
+
+
+    </div>
+
+    <!--imagen predeterminada para jugador y barra de vida-->
+    <div id="jugador">
+
+        <div class="bar-container">
+        <div class="bar" id="vidaJugador"></div>
+        </div>
+    
+        <img id="megumin" src="megumin.gif" alt="">
+        </div>
+
+    
+    <div id="ataque1">
+        <div class="ataque"><img src="ataqueagua.png"
+            onclick="ataqueJugador(10,'Agua'), turnos();">
+        </div>
+
+        <div  class="ataque"><img src="ataqueaire.png"
+             onclick="ataqueJugador(30,'Aire'), turnos();">
+        </div>
+
+        <div class="ataque"><img src="ataquefuego.png"
+            onclick="ataqueJugador(60,'Fuego'), turnos();">
+        </div>
+
+        <div class="ataque"><img src="ataquetierra.png"
+        onclick="ataqueJugador(70,'Tierra'), turnos();">
+        </div>
+    </div>
+
+    <!--imagen predeterminada para enemigo y barra de vida-->
+    <div id="enemigo">
+
+        <div class="bar-container">
+        <div class="bar" id="vidaEnemigo"></div>
+        </div>
+    
+        <img id="ainz" src="Ainz.gif" alt="">
+     </div>
+
+    <div id="defensa1" style="display: none">
+        <div class="defensa"><img src="defensaagua.png"
+            onclick="defensaJugador(10, 'Agua'), turnos();">
+        </div>
+
+        <div class="defensa"><img src="defensaviento.png"
+            onclick="defensaJugador(30, 'Aire'), turnos();">
+        </div>
+
+        <div class="defensa"><img src="defensafuego.png"
+            onclick="defensaJugador(60, 'Fuego'), turnos();">
+        </div>
+
+        <div class="defensa"><img src="defensatierra.png"
+            onclick="defensaJugador(70, 'Tierra'), turnos();">
+        </div>
+    </div>
+
+    <!--Finalización del juego, perdedor y ganador-->
+    <div>
+        <div id="perdedor" style="display: none;">
+                LO SENTIMOS HAS PERDIDO 
+        </div>
+
+        <div id="ganador" style="display: none;">
+            HAS GANADO
+        </div>
+    </div>
+    <a href="index.html">
+        <img id="buton" src="XDZT.gif" >
+    </a>
+</body>
+
+</html>
